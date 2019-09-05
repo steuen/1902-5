@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,21 +10,43 @@
 <style>
     span{
   color:#FF00FF;
-  font-size:30px
+  font-size:15px;
 }
 
 div{
-  background:#CCCCCCCC;
-  font-size:20px
+  background:#CCCCCC;
+  font-size:30px;
 }
   </style>
 </head>
 <body translate="no">
+<div>
+<button id="playMe">Play Me</button>
+<button id="playHalf">Play Half Speed</button>
+</div>
+<video width="320" height="240" id="myVid" controls>
+<source src="https://github.com/seattleacademy/1902-5/raw/master/video/myvideo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 <div>Hello<span>World</span></div>
 <script id="rendered-js">
-      console.log("hello world")
-var x = 5
-console.log("hello world",x);
+      console.clear();
+
+document.getElementById("playMe").addEventListener("click",doPlayMe);
+document.getElementById("playHalf").addEventListener("click",doHalfSpeed);
+
+var myVid = document.getElementById("myVid");
+
+function doPlayMe(e){
+  console.log("Play Me Pressed");
+  myVid.play();
+}
+
+function doHalfSpeed(e){
+  console.log("Play Half Spped");
+  myVid.playbackRate = .5;
+  myVid.play();
+}
     </script>
 </body>
 </html>
