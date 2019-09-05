@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +10,6 @@
   color:#FF00FF;
   font-size:15px;
 }
-
 div{
   background:#CCCCCC;
   font-size:30px;
@@ -31,17 +28,13 @@ Your browser does not support the video tag.
 <div>Hello<span>World</span></div>
 <script id="rendered-js">
       console.clear();
-
 document.getElementById("playMe").addEventListener("click",doPlayMe);
 document.getElementById("playHalf").addEventListener("click",doHalfSpeed);
-
 var myVid = document.getElementById("myVid");
-
 function doPlayMe(e){
   console.log("Play Me Pressed");
   myVid.play();
 }
-
 function doHalfSpeed(e){
   console.log("Play Half Spped");
   myVid.playbackRate = .5;
